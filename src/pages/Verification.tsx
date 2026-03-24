@@ -340,17 +340,17 @@ export default function Verification({ onComplete, setHideTabBar }: { onComplete
           <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={() => setShowReviewModal(false)}></div>
           
           {/* Modal Content */}
-          <div className="bg-white rounded-3xl w-full max-w-sm overflow-hidden relative z-10 animate-[scale-up_0.2s_ease-out]">
-            <div className="bg-gradient-to-r from-[#4ade80] to-[#22c55e] py-6 flex flex-col items-center justify-center">
-              <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-3">
-                <MonitorPlay size={32} className="text-white" strokeWidth={2} />
+          <div className="bg-white rounded-3xl w-full max-w-sm overflow-hidden relative z-10 shadow-2xl animate-[scale-up_0.2s_ease-out] border border-gray-100">
+            <div className="bg-[#22c55e] py-8 flex flex-col items-center justify-center">
+              <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-4">
+                <MonitorPlay size={36} className="text-white" strokeWidth={2} />
               </div>
-              <h3 className="text-2xl font-bold text-white tracking-widest drop-shadow-sm">审核中</h3>
+              <h3 className="text-3xl font-bold text-white tracking-[0.2em] drop-shadow-sm">审核中</h3>
             </div>
             
-            <div className="p-8 text-center">
-              <p className="text-lg text-gray-700 leading-relaxed mb-8">
-                审核成功将会为您佩戴上<br/><span className="text-[#166534] font-bold text-xl tracking-wider">北大甄选徽章</span>
+            <div className="p-8 text-center bg-white">
+              <p className="text-xl text-gray-700 leading-relaxed mb-10">
+                审核成功将会为您佩戴上<br/><span className="text-[#166534] font-black text-2xl tracking-wider">北大甄选徽章</span>
               </p>
               
               <button
@@ -358,9 +358,9 @@ export default function Verification({ onComplete, setHideTabBar }: { onComplete
                   setShowReviewModal(false);
                   goToStep(5);
                 }}
-                className="w-full py-3.5 bg-gradient-to-r from-[#22c55e] to-[#16a34a] rounded-full text-white text-xl font-bold shadow-md active:scale-95 transition-transform"
+                className="w-full py-4 bg-[#22c55e] rounded-full text-white text-2xl font-black shadow-lg shadow-green-500/20 active:scale-95 transition-transform"
               >
-                确定
+                我知道了
               </button>
             </div>
           </div>
