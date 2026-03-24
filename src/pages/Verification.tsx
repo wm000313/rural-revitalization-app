@@ -2,7 +2,6 @@ import { useState, useRef, type ChangeEvent } from 'react';
 import { FileText, UserCheck, ShieldCheck, Check, ChevronLeft, MonitorPlay, Camera, Award, Upload } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import FarmerAvatar from '../components/FarmerAvatar';
-import SpringBackground from '../components/SpringBackground';
 
 export default function Verification({ onComplete, setHideTabBar }: { onComplete: () => void, setHideTabBar: (hide: boolean) => void }) {
   const [step, setStep] = useState(0);
@@ -34,7 +33,6 @@ export default function Verification({ onComplete, setHideTabBar }: { onComplete
 
   const renderGuide = () => (
     <div className="h-full bg-gradient-to-b from-[#86efac] via-[#f0fdf4] to-[#fff1f2] flex flex-col relative font-sans overflow-hidden">
-      <SpringBackground />
       <div className="pt-10 pb-4 text-center relative z-10">
         <h1 className="text-3xl font-black text-white tracking-wider drop-shadow-lg" style={{ textShadow: '0 2px 8px rgba(34,197,94,0.4)' }}>认证流程指引</h1>
       </div>
