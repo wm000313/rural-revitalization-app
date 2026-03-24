@@ -82,9 +82,6 @@ const FarmerAvatar: React.FC<FarmerAvatarProps> = ({ className = '', size = 80 }
         
         {/* Hat Texture (Woven lines) */}
         <path d="M100 10 L 100 55 M 80 18 L 60 52 M 120 18 L 140 52 M 60 25 L 140 25 M 40 38 L 160 38" stroke="#B7950B" strokeWidth="1.5" opacity="0.6" fill="none" />
-        
-        {/* Hat String (Under the chin) */}
-        <path d="M65 52 C 80 110, 120 110, 135 52" stroke="#4E342E" strokeWidth="1.5" strokeLinecap="round" fill="none" strokeDasharray="4 2" />
 
       </svg>
     </div>
