@@ -32,12 +32,12 @@ export default function Verification({ onComplete, setHideTabBar }: { onComplete
   };
 
   const renderGuide = () => (
-    <div className="h-full bg-gradient-to-b from-[#86efac] via-[#f0fdf4] to-[#fff1f2] flex flex-col relative font-sans overflow-hidden">
+    <div className="min-h-full bg-gradient-to-b from-[#86efac] via-[#f0fdf4] to-[#fff1f2] flex flex-col relative font-sans">
       <div className="pt-10 pb-4 text-center relative z-10">
         <h1 className="text-3xl font-black text-white tracking-wider drop-shadow-lg" style={{ textShadow: '0 2px 8px rgba(34,197,94,0.4)' }}>认证流程指引</h1>
       </div>
       
-      <div className="flex-1 px-4 flex flex-col justify-evenly pb-48 pt-4 relative z-10">
+      <div className="flex-1 px-4 flex flex-col gap-6 pb-48 pt-4 relative z-10">
         {/* Card 1 */}
         <div className="bg-white rounded-2xl p-6 flex items-center shadow-sm">
           <div className="w-16 h-16 bg-green-50 rounded-xl flex items-center justify-center mr-4 shrink-0">
@@ -99,17 +99,17 @@ export default function Verification({ onComplete, setHideTabBar }: { onComplete
             让优质农产品直达千家万户<br/>提高收入，打造个人品牌
           </p>
         </motion.div>
-      </div>
 
-      <div className="absolute bottom-[110px] left-0 right-0 px-6 z-20">
-        <motion.button
-          whileHover={{ scale: 1.02 }}
-          whileTap={{ scale: 0.98 }}
-          onClick={() => goToStep(1)}
-          className="w-full py-4 bg-gradient-to-r from-[#16a34a] via-[#22c55e] to-[#16a34a] bg-[length:200%_auto] hover:bg-right transition-all duration-500 rounded-full text-white text-xl font-black shadow-[0_10px_20px_rgba(34,197,94,0.4)] tracking-widest relative"
-        >
-          立即注册
-        </motion.button>
+        <div className="mt-8 mb-12">
+          <motion.button
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            onClick={() => goToStep(1)}
+            className="w-full py-4 bg-gradient-to-r from-[#16a34a] via-[#22c55e] to-[#16a34a] bg-[length:200%_auto] hover:bg-right transition-all duration-500 rounded-full text-white text-xl font-black shadow-[0_10px_20px_rgba(34,197,94,0.4)] tracking-widest relative z-20"
+          >
+            立即注册
+          </motion.button>
+        </div>
       </div>
     </div>
   );

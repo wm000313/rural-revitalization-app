@@ -30,7 +30,7 @@ export default function App() {
   if (currentPage === 'verification') {
     return (
       <div className="flex justify-center items-center bg-gray-900 min-h-screen">
-        <div className="w-full sm:w-[440px] h-screen sm:h-[956px] sm:rounded-[50px] bg-transparent flex flex-col relative overflow-hidden shadow-2xl sm:border-[12px] sm:border-black">
+        <div className="w-full sm:w-[440px] h-screen sm:h-[956px] sm:rounded-[50px] bg-white flex flex-col relative overflow-hidden shadow-2xl sm:border-[12px] sm:border-black">
           <div className="flex-1 overflow-y-auto scrollbar-hide">
             <Verification onComplete={() => setCurrentPage('main')} setHideTabBar={setHideTabBar} />
           </div>
