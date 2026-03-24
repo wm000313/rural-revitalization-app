@@ -220,7 +220,7 @@ export default function Verification({ onComplete, setHideTabBar }: { onComplete
               </div>
             </div>
           ) : (
-            <button onClick={() => organicInputRef.current?.click()} className="w-full py-4 bg-gradient-to-r from-[#16a34a] to-[#15803d] rounded-xl text-white text-lg font-bold flex items-center justify-center shadow-md active:scale-95 transition-transform">
+            <button onClick={() => organicInputRef.current?.click()} className="w-full py-4 bg-[#16a34a] rounded-xl text-white text-lg font-bold flex items-center justify-center shadow-md active:scale-95 transition-transform">
               <Camera className="mr-2" size={24} />
               点击上传绿色有机证书照片
             </button>
@@ -245,7 +245,7 @@ export default function Verification({ onComplete, setHideTabBar }: { onComplete
               </div>
             </div>
           ) : (
-            <button onClick={() => heritageInputRef.current?.click()} className="w-full py-4 bg-gradient-to-r from-[#16a34a] to-[#15803d] rounded-xl text-white text-lg font-bold flex items-center justify-center shadow-md active:scale-95 transition-transform">
+            <button onClick={() => heritageInputRef.current?.click()} className="w-full py-4 bg-[#16a34a] rounded-xl text-white text-lg font-bold flex items-center justify-center shadow-md active:scale-95 transition-transform">
               <Camera className="mr-2" size={24} />
               点击上传非遗技艺证明材料
             </button>

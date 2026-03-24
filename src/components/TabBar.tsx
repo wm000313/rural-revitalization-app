@@ -15,7 +15,7 @@ export default function TabBar({ activeTab, setActiveTab }: { activeTab: string,
       <div className="w-16 flex justify-center">
         <button 
           onClick={() => setActiveTab('sell')} 
-          className={`absolute bottom-10 left-1/2 transform -translate-x-1/2 rounded-full p-4 shadow-xl border-4 border-white active:scale-95 transition-transform ${activeTab === 'sell' ? 'bg-[#16a34a] text-white' : 'bg-[#22c55e] text-white'}`}
+          className={`absolute bottom-10 left-1/2 transform -translate-x-1/2 rounded-full p-4 shadow-xl border-4 border-white active:scale-95 transition-transform ${activeTab === 'sell' ? 'bg-[#16a34a]' : 'bg-[#22c55e]'} text-white`}
         >
           <Plus size={32} strokeWidth={3} className={activeTab === 'sell' ? 'rotate-45 transition-transform' : 'transition-transform'} />
         </button>
