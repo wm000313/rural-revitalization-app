@@ -54,7 +54,7 @@ export default function Profile() {
               <span className="text-green-600/30">|</span>
               <span className="text-green-700">7x24小时在线</span>
             </button>
-            <button className="w-full bg-gradient-to-r from-[#22c55e] to-[#16a34a] text-white py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 active:scale-95 transition-transform shadow-md shadow-green-200">
+            <button className="w-full bg-[#22c55e] text-white py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 active:scale-95 transition-transform shadow-md">
               <span>转人工客服</span>
               <span className="text-white/30">|</span>
               <span>8:00-22:00在线</span>

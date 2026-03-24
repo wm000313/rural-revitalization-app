@@ -2,8 +2,8 @@ import { ArrowLeft, Phone, AlertCircle } from 'lucide-react';
 
 export default function EmergencyAid({ navigate }: { navigate: (page: string) => void }) {
   return (
-    <div className="h-full overflow-y-auto bg-gray-50 pb-24 font-sans">
-      <div className="bg-gradient-to-r from-red-500 to-orange-500 pt-12 pb-6 px-4 rounded-b-3xl shadow-md">
+    <div className="h-full overflow-y-auto bg-[#fef2f2] pb-24 font-sans">
+      <div className="bg-gradient-to-r from-[#ef4444] to-[#f97316] pt-12 pb-6 px-4 rounded-b-3xl shadow-md">
         <div className="flex items-center mb-4">
           <button onClick={() => navigate('main')} className="text-white">
             <ArrowLeft size={28} />

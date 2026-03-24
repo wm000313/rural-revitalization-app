@@ -146,7 +146,7 @@ export default function Publish({ setActiveTab }: { setActiveTab: (tab: string) 
             <div className="mt-auto pb-6">
               <button 
                 onClick={() => setActiveTab('diary')}
-                className="w-full bg-gradient-to-r from-[#4ade80] to-[#22c55e] text-white font-bold text-lg py-3.5 rounded-full shadow-lg shadow-green-200 active:scale-95 transition-transform"
+                className="w-full bg-[#22c55e] text-white font-bold text-lg py-3.5 rounded-full shadow-lg active:scale-95 transition-transform"
               >
                 发布
               </button>

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, MouseEvent } from 'react';
 import { Search, Bell, ChevronRight, MessageSquare, AlarmClock, Bot, FileSearch, ChevronLeft } from 'lucide-react';
 
 export default function Home({ navigate, setActiveTab }: { navigate: (page: string) => void, setActiveTab: (tab: string) => void }) {
@@ -32,20 +32,20 @@ export default function Home({ navigate, setActiveTab }: { navigate: (page: stri
     return () => clearInterval(timer);
   }, []);
 
-  const nextBanner = (e: React.MouseEvent) => {
+  const nextBanner = (e: MouseEvent) => {
     e.stopPropagation();
     setCurrentBanner((prev) => (prev + 1) % banners.length);
   };
 
-  const prevBanner = (e: React.MouseEvent) => {
+  const prevBanner = (e: MouseEvent) => {
     e.stopPropagation();
     setCurrentBanner((prev) => (prev - 1 + banners.length) % banners.length);
   };
 
   return (
-    <div className="min-h-full bg-[#f5f7fa] pb-24 font-sans relative">
+    <div className="min-h-full bg-[#f0fdf4] pb-24 font-sans relative">
       {/* Header Background with Wave */}
-      <div className="absolute top-0 left-0 w-full h-64 bg-gradient-to-b from-[#32d74b] to-[#86efac] z-0 rounded-b-[3rem]"></div>
+      <div className="absolute top-0 left-0 w-full h-64 bg-gradient-to-b from-[#4ade80] to-[#22c55e] z-0 rounded-b-[3rem]"></div>
 
       {/* Top Search Bar */}
       <div className="pt-12 px-4 flex items-center gap-3 relative z-10">
@@ -110,24 +110,24 @@ export default function Home({ navigate, setActiveTab }: { navigate: (page: stri
 
       {/* Core Functions */}
       <div className="px-4 mt-6 relative z-10">
-        <div className="bg-gradient-to-b from-[#4ade80] to-[#22c55e] rounded-2xl p-6 flex justify-between items-center shadow-md">
+        <div className="bg-[#22c55e] rounded-2xl p-6 flex justify-between items-center shadow-md">
           <button onClick={() => setActiveTab('sell')} className="flex flex-col items-center gap-3 flex-1">
-            <div className="w-14 h-14 bg-gradient-to-br from-[#22c55e] to-[#16a34a] rounded-full flex items-center justify-center shadow-[inset_0_2px_4px_rgba(255,255,255,0.3),0_4px_8px_rgba(0,0,0,0.15)]">
-              <AlarmClock size={28} className="text-white drop-shadow-md" strokeWidth={2.5} />
+            <div className="w-14 h-14 bg-[#16a34a] rounded-full flex items-center justify-center shadow-lg">
+              <AlarmClock size={28} className="text-white" strokeWidth={2.5} />
             </div>
-            <span className="text-white font-bold text-sm tracking-wider drop-shadow-sm">我要卖货</span>
+            <span className="text-white font-bold text-sm tracking-wider">我要卖货</span>
           </button>
           <button onClick={() => navigate('aiqa')} className="flex flex-col items-center gap-3 flex-1">
-            <div className="w-14 h-14 bg-gradient-to-br from-[#22c55e] to-[#16a34a] rounded-full flex items-center justify-center shadow-[inset_0_2px_4px_rgba(255,255,255,0.3),0_4px_8px_rgba(0,0,0,0.15)]">
-              <Bot size={28} className="text-white drop-shadow-md" strokeWidth={2.5} />
+            <div className="w-14 h-14 bg-[#16a34a] rounded-full flex items-center justify-center shadow-lg">
+              <Bot size={28} className="text-white" strokeWidth={2.5} />
             </div>
-            <span className="text-white font-bold text-sm tracking-wider drop-shadow-sm">AI农技问答</span>
+            <span className="text-white font-bold text-sm tracking-wider">AI农技问答</span>
           </button>
           <button onClick={() => navigate('emergency')} className="flex flex-col items-center gap-3 flex-1">
-            <div className="w-14 h-14 bg-gradient-to-br from-[#22c55e] to-[#16a34a] rounded-full flex items-center justify-center shadow-[inset_0_2px_4px_rgba(255,255,255,0.3),0_4px_8px_rgba(0,0,0,0.15)]">
-              <FileSearch size={28} className="text-white drop-shadow-md" strokeWidth={2.5} />
+            <div className="w-14 h-14 bg-[#16a34a] rounded-full flex items-center justify-center shadow-lg">
+              <FileSearch size={28} className="text-white" strokeWidth={2.5} />
             </div>
-            <span className="text-white font-bold text-sm tracking-wider drop-shadow-sm">紧急助农</span>
+            <span className="text-white font-bold text-sm tracking-wider">紧急助农</span>
           </button>
         </div>
       </div>

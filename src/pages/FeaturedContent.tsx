@@ -32,12 +32,12 @@ export default function FeaturedContent({ navigate }: { navigate: (page: string)
   ];
 
   return (
-    <div className="h-full flex flex-col bg-[#f5f7fa] font-sans relative">
-      <div className="pt-12 px-4 flex items-center bg-white pb-4 shadow-sm z-10 sticky top-0">
-        <button onClick={() => navigate('main')} className="text-gray-800">
+    <div className="h-full flex flex-col bg-[#f0fdf4] font-sans relative">
+      <div className="pt-12 px-4 flex items-center bg-gradient-to-r from-[#4ade80] to-[#22c55e] pb-6 text-white shadow-sm z-10 sticky top-0">
+        <button onClick={() => navigate('main')} className="text-white">
           <ArrowLeft size={28} />
         </button>
-        <h1 className="text-xl font-bold text-gray-800 mx-auto pr-7">热门推荐</h1>
+        <h1 className="text-xl font-bold mx-auto pr-7">热门推荐</h1>
       </div>
 
       <div className="flex-1 overflow-y-auto p-4 space-y-4">
