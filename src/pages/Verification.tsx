@@ -103,12 +103,12 @@ export default function Verification({ onComplete, setHideTabBar }: { onComplete
         </motion.div>
       </div>
 
-      <div className="absolute bottom-[110px] left-0 right-0 px-6">
+      <div className="absolute bottom-[110px] left-0 right-0 px-6 z-20">
         <motion.button
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
           onClick={() => goToStep(1)}
-          className="w-full py-4 bg-gradient-to-r from-[#16a34a] via-[#22c55e] to-[#16a34a] bg-[length:200%_auto] hover:bg-right transition-all duration-500 rounded-full text-white text-xl font-black shadow-[0_10px_20px_rgba(34,197,94,0.4)] tracking-widest"
+          className="w-full py-4 bg-gradient-to-r from-[#16a34a] via-[#22c55e] to-[#16a34a] bg-[length:200%_auto] hover:bg-right transition-all duration-500 rounded-full text-white text-xl font-black shadow-[0_10px_20px_rgba(34,197,94,0.4)] tracking-widest relative"
         >
           立即注册
         </motion.button>
