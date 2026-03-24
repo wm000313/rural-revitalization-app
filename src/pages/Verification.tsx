@@ -2,6 +2,7 @@ import { useState, useRef, type ChangeEvent } from 'react';
 import { FileText, UserCheck, ShieldCheck, Check, ChevronLeft, MonitorPlay, Camera, Award, Upload } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import FarmerAvatar from '../components/FarmerAvatar';
+import SpringBackground from '../components/SpringBackground';
 
 export default function Verification({ onComplete, setHideTabBar }: { onComplete: () => void, setHideTabBar: (hide: boolean) => void }) {
   const [step, setStep] = useState(0);
@@ -32,12 +33,13 @@ export default function Verification({ onComplete, setHideTabBar }: { onComplete
   };
 
   const renderGuide = () => (
-    <div className="h-full bg-gradient-to-b from-[#4ade80] to-[#f0fdf4] flex flex-col relative font-sans overflow-hidden">
-      <div className="pt-10 pb-4 text-center">
-        <h1 className="text-3xl font-black text-white tracking-wider drop-shadow-md" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.1)' }}>认证流程指引</h1>
+    <div className="h-full bg-gradient-to-b from-[#86efac] via-[#f0fdf4] to-[#fff1f2] flex flex-col relative font-sans overflow-hidden">
+      <SpringBackground />
+      <div className="pt-10 pb-4 text-center relative z-10">
+        <h1 className="text-3xl font-black text-white tracking-wider drop-shadow-lg" style={{ textShadow: '0 2px 8px rgba(34,197,94,0.4)' }}>认证流程指引</h1>
       </div>
       
-      <div className="flex-1 px-4 flex flex-col justify-evenly pb-48 pt-4">
+      <div className="flex-1 px-4 flex flex-col justify-evenly pb-48 pt-4 relative z-10">
         {/* Card 1 */}
         <div className="bg-white rounded-2xl p-6 flex items-center shadow-sm">
           <div className="w-16 h-16 bg-green-50 rounded-xl flex items-center justify-center mr-4 shrink-0">
@@ -75,11 +77,23 @@ export default function Verification({ onComplete, setHideTabBar }: { onComplete
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6 }}
-          className="bg-white/40 backdrop-blur-md rounded-3xl border border-white/60 p-6 flex flex-col items-center justify-center relative overflow-hidden shadow-lg"
+          className="bg-white/50 backdrop-blur-md rounded-3xl border border-white/80 p-6 flex flex-col items-center justify-center relative overflow-hidden shadow-xl"
         >
-          <div className="absolute top-0 right-0 w-32 h-32 bg-white/30 rounded-full blur-3xl -mr-10 -mt-10 animate-pulse"></div>
+          <div className="absolute top-0 right-0 w-32 h-32 bg-pink-300/30 rounded-full blur-3xl -mr-10 -mt-10 animate-pulse"></div>
           <div className="absolute bottom-0 left-0 w-24 h-24 bg-green-400/30 rounded-full blur-2xl -ml-10 -mb-10"></div>
           
+          {/* Floral accent near avatar */}
+          <div className="absolute top-6 left-6 text-pink-300/60 rotate-12">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 22C12 22 4 16 4 10C4 5.58172 7.58172 2 12 2C16.4183 2 20 5.58172 20 10C20 16 12 22 12 22Z" />
+            </svg>
+          </div>
+          <div className="absolute bottom-16 right-6 text-yellow-300/50 -rotate-12">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 22C12 22 4 16 4 10C4 5.58172 7.58172 2 12 2C16.4183 2 20 5.58172 20 10C20 16 12 22 12 22Z" />
+            </svg>
+          </div>
+
           <FarmerAvatar size={100} className="mb-4 z-10" />
           
           <h4 className="text-green-900 font-black text-xl mb-2 z-10 tracking-wider">加入我们，助力乡村振兴</h4>
