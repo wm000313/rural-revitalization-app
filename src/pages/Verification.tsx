@@ -1,5 +1,7 @@
 import { useState, useRef, type ChangeEvent } from 'react';
 import { FileText, UserCheck, ShieldCheck, Check, ChevronLeft, MonitorPlay, Camera, Award, Upload } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import FarmerAvatar from '../components/FarmerAvatar';
 
 export default function Verification({ onComplete, setHideTabBar }: { onComplete: () => void, setHideTabBar: (hide: boolean) => void }) {
   const [step, setStep] = useState(0);
@@ -69,25 +71,33 @@ export default function Verification({ onComplete, setHideTabBar }: { onComplete
           </div>
         </div>
         {/* Decorative Space Filler */}
-        <div className="bg-white/40 backdrop-blur-sm rounded-3xl border border-white/60 p-6 flex flex-col items-center justify-center relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-32 h-32 bg-white/20 rounded-full blur-2xl -mr-10 -mt-10"></div>
-          <div className="absolute bottom-0 left-0 w-24 h-24 bg-green-400/20 rounded-full blur-xl -ml-10 -mb-10"></div>
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6 }}
+          className="bg-white/40 backdrop-blur-md rounded-3xl border border-white/60 p-6 flex flex-col items-center justify-center relative overflow-hidden shadow-lg"
+        >
+          <div className="absolute top-0 right-0 w-32 h-32 bg-white/30 rounded-full blur-3xl -mr-10 -mt-10 animate-pulse"></div>
+          <div className="absolute bottom-0 left-0 w-24 h-24 bg-green-400/30 rounded-full blur-2xl -ml-10 -mb-10"></div>
           
-          <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Farmer&backgroundColor=transparent&clothing=overall" alt="Farmer illustration" className="w-20 h-20 mb-3 drop-shadow-md z-10" referrerPolicy="no-referrer" />
-          <h4 className="text-green-800 font-bold text-lg mb-1.5 z-10 tracking-wide">加入我们，助力乡村振兴</h4>
-          <p className="text-green-700/80 text-sm text-center font-medium z-10">
+          <FarmerAvatar size={100} className="mb-4 z-10" />
+          
+          <h4 className="text-green-900 font-black text-xl mb-2 z-10 tracking-wider">加入我们，助力乡村振兴</h4>
+          <p className="text-green-800/80 text-sm text-center font-bold z-10 leading-relaxed">
             让优质农产品直达千家万户<br/>提高收入，打造个人品牌
           </p>
-        </div>
+        </motion.div>
       </div>
 
       <div className="absolute bottom-[110px] left-0 right-0 px-6">
-        <button
+        <motion.button
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.98 }}
           onClick={() => goToStep(1)}
-          className="w-full py-4 bg-gradient-to-r from-[#22c55e] to-[#16a34a] rounded-full text-white text-xl font-bold shadow-[0_8px_16px_rgba(34,197,94,0.4)] active:scale-95 transition-transform"
+          className="w-full py-4 bg-gradient-to-r from-[#16a34a] via-[#22c55e] to-[#16a34a] bg-[length:200%_auto] hover:bg-right transition-all duration-500 rounded-full text-white text-xl font-black shadow-[0_10px_20px_rgba(34,197,94,0.4)] tracking-widest"
         >
           立即注册
-        </button>
+        </motion.button>
       </div>
     </div>
   );

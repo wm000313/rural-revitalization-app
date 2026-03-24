@@ -1,5 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { Mic, ArrowLeft, Send, Loader2 } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import FarmerAvatar from '../components/FarmerAvatar';
 
 interface Message {
   id: number;
@@ -95,10 +97,15 @@ export default function AIQA({ navigate }: { navigate: (page: string) => void })
         {/* Chat History */}
         <div className="space-y-4">
           {messages.map((msg) => (
-            <div key={msg.id} className={`flex ${msg.type === 'user' ? 'justify-end' : 'justify-start'}`}>
+            <motion.div 
+              initial={{ opacity: 0, x: msg.type === 'user' ? 20 : -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              key={msg.id} 
+              className={`flex ${msg.type === 'user' ? 'justify-end' : 'justify-start'}`}
+            >
               {msg.type === 'ai' && (
-                <div className="w-10 h-10 rounded-full bg-white border-2 border-green-100 overflow-hidden flex-shrink-0 mr-2 shadow-sm flex items-center justify-center">
-                  <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix&backgroundColor=transparent" alt="AI" className="w-8 h-8 object-contain" referrerPolicy="no-referrer" />
+                <div className="w-10 h-10 rounded-full bg-white border-2 border-green-200 overflow-hidden flex-shrink-0 mr-2 shadow-sm flex items-center justify-center p-1">
+                  <FarmerAvatar size={32} />
                 </div>
               )}
               
@@ -111,13 +118,13 @@ export default function AIQA({ navigate }: { navigate: (page: string) => void })
                   <p key={i} className={i > 0 ? 'mt-1' : ''}>{line}</p>
                 ))}
               </div>
-            </div>
+            </motion.div>
           ))}
           
           {isTyping && (
             <div className="flex justify-start">
-              <div className="w-10 h-10 rounded-full bg-white border-2 border-green-100 overflow-hidden flex-shrink-0 mr-2 shadow-sm flex items-center justify-center">
-                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix&backgroundColor=transparent" alt="AI" className="w-8 h-8 object-contain" referrerPolicy="no-referrer" />
+              <div className="w-10 h-10 rounded-full bg-white border-2 border-green-200 overflow-hidden flex-shrink-0 mr-2 shadow-sm flex items-center justify-center p-1">
+                <FarmerAvatar size={32} />
               </div>
               <div className="bg-white rounded-2xl rounded-tl-sm p-4 shadow-sm border border-green-50 flex items-center gap-2">
                 <Loader2 size={16} className="text-[#32d74b] animate-spin" />
