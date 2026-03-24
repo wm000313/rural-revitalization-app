@@ -17,7 +17,6 @@ import ConsumerInteraction from './pages/ConsumerInteraction';
 import PlatformNotifications from './pages/PlatformNotifications';
 import MarketQuotes from './pages/MarketQuotes';
 import FeaturedContent from './pages/FeaturedContent';
-import SpringBackground from './components/SpringBackground';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('home');
@@ -31,12 +30,11 @@ export default function App() {
   if (currentPage === 'verification') {
     return (
       <div className="flex justify-center items-center bg-gray-900 min-h-screen">
-        <div className="w-full sm:w-[440px] h-screen sm:h-[956px] sm:rounded-[50px] bg-white flex flex-col relative overflow-hidden shadow-2xl sm:border-[12px] sm:border-black">
-          <div className="absolute inset-0 z-0 pointer-events-none opacity-50"><SpringBackground /></div>
-          <div className="flex-1 overflow-y-auto scrollbar-hide z-10 relative">
+        <div className="w-full sm:w-[440px] h-screen sm:h-[956px] sm:rounded-[50px] bg-transparent flex flex-col relative overflow-hidden shadow-2xl sm:border-[12px] sm:border-black">
+          <div className="flex-1 overflow-y-auto scrollbar-hide">
             <Verification onComplete={() => setCurrentPage('main')} setHideTabBar={setHideTabBar} />
           </div>
-          {!hideTabBar && <div className="z-20 relative"><TabBar activeTab="home" setActiveTab={() => {}} /></div>}
+          {!hideTabBar && <TabBar activeTab="home" setActiveTab={() => {}} />}
         </div>
       </div>
     );
@@ -46,10 +44,7 @@ export default function App() {
     return (
       <div className="flex justify-center items-center bg-gray-900 min-h-screen">
         <div className="w-full sm:w-[440px] h-screen sm:h-[956px] sm:rounded-[50px] bg-white flex flex-col relative overflow-hidden shadow-2xl sm:border-[12px] sm:border-black">
-          <div className="absolute inset-0 z-0 pointer-events-none opacity-50"><SpringBackground /></div>
-          <div className="flex-1 z-10 relative overflow-y-auto">
-            <AIQA navigate={navigate} />
-          </div>
+          <AIQA navigate={navigate} />
         </div>
       </div>
     );
@@ -59,10 +54,7 @@ export default function App() {
     return (
       <div className="flex justify-center items-center bg-gray-900 min-h-screen">
         <div className="w-full sm:w-[440px] h-screen sm:h-[956px] sm:rounded-[50px] bg-white flex flex-col relative overflow-hidden shadow-2xl sm:border-[12px] sm:border-black">
-          <div className="absolute inset-0 z-0 pointer-events-none opacity-50"><SpringBackground /></div>
-          <div className="flex-1 z-10 relative overflow-y-auto">
-            <EmergencyAid navigate={navigate} />
-          </div>
+          <EmergencyAid navigate={navigate} />
         </div>
       </div>
     );
@@ -72,10 +64,7 @@ export default function App() {
     return (
       <div className="flex justify-center items-center bg-gray-900 min-h-screen">
         <div className="w-full sm:w-[440px] h-screen sm:h-[956px] sm:rounded-[50px] bg-white flex flex-col relative overflow-hidden shadow-2xl sm:border-[12px] sm:border-black">
-          <div className="absolute inset-0 z-0 pointer-events-none opacity-50"><SpringBackground /></div>
-          <div className="flex-1 z-10 relative overflow-y-auto">
-            <ConsumerInteraction navigate={navigate} />
-          </div>
+          <ConsumerInteraction navigate={navigate} />
         </div>
       </div>
     );
@@ -85,10 +74,7 @@ export default function App() {
     return (
       <div className="flex justify-center items-center bg-gray-900 min-h-screen">
         <div className="w-full sm:w-[440px] h-screen sm:h-[956px] sm:rounded-[50px] bg-white flex flex-col relative overflow-hidden shadow-2xl sm:border-[12px] sm:border-black">
-          <div className="absolute inset-0 z-0 pointer-events-none opacity-50"><SpringBackground /></div>
-          <div className="flex-1 z-10 relative overflow-y-auto">
-            <PlatformNotifications navigate={navigate} />
-          </div>
+          <PlatformNotifications navigate={navigate} />
         </div>
       </div>
     );
@@ -98,10 +84,7 @@ export default function App() {
     return (
       <div className="flex justify-center items-center bg-gray-900 min-h-screen">
         <div className="w-full sm:w-[440px] h-screen sm:h-[956px] sm:rounded-[50px] bg-white flex flex-col relative overflow-hidden shadow-2xl sm:border-[12px] sm:border-black">
-          <div className="absolute inset-0 z-0 pointer-events-none opacity-50"><SpringBackground /></div>
-          <div className="flex-1 z-10 relative overflow-y-auto">
-            <MarketQuotes navigate={navigate} />
-          </div>
+          <MarketQuotes navigate={navigate} />
         </div>
       </div>
     );
@@ -111,10 +94,7 @@ export default function App() {
     return (
       <div className="flex justify-center items-center bg-gray-900 min-h-screen">
         <div className="w-full sm:w-[440px] h-screen sm:h-[956px] sm:rounded-[50px] bg-white flex flex-col relative overflow-hidden shadow-2xl sm:border-[12px] sm:border-black">
-          <div className="absolute inset-0 z-0 pointer-events-none opacity-50"><SpringBackground /></div>
-          <div className="flex-1 z-10 relative overflow-y-auto">
-            <FeaturedContent navigate={navigate} />
-          </div>
+          <FeaturedContent navigate={navigate} />
         </div>
       </div>
     );
@@ -123,15 +103,14 @@ export default function App() {
   return (
     <div className="flex justify-center items-center bg-gray-900 min-h-screen">
       <div className="w-full sm:w-[440px] h-screen sm:h-[956px] sm:rounded-[50px] bg-white flex flex-col relative overflow-hidden shadow-2xl sm:border-[12px] sm:border-black">
-        <div className="absolute inset-0 z-0 pointer-events-none opacity-50"><SpringBackground /></div>
-        <div className="flex-1 overflow-y-auto scrollbar-hide z-10 relative">
+        <div className="flex-1 overflow-y-auto scrollbar-hide">
           {activeTab === 'home' && <Home navigate={navigate} setActiveTab={setActiveTab} />}
           {activeTab === 'sell' && <Sell navigate={navigate} setActiveTab={setActiveTab} />}
           {activeTab === 'diary' && <Diary setActiveTab={setActiveTab} />}
           {activeTab === 'profile' && <Profile />}
           {activeTab === 'publish' && <Publish setActiveTab={setActiveTab} />}
         </div>
-        <div className="z-20 relative"><TabBar activeTab={activeTab} setActiveTab={setActiveTab} /></div>
+        <TabBar activeTab={activeTab} setActiveTab={setActiveTab} />
       </div>
     </div>
   );
