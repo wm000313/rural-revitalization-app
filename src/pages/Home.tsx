@@ -143,12 +143,12 @@ export default function Home({ navigate, setActiveTab }: { navigate: (page: stri
           {/* Card 1 */}
           <div 
             onClick={() => navigate('consumer_interaction')}
-            className="bg-gradient-to-br from-[#4ade80] to-[#22c55e] rounded-2xl p-4 shadow-sm flex flex-col justify-center h-32 relative overflow-hidden group cursor-pointer hover:shadow-md transition-shadow"
+            className="bg-[#22c55e] rounded-2xl p-4 shadow-sm flex flex-col justify-center h-32 relative overflow-hidden group cursor-pointer hover:shadow-md transition-shadow"
           >
             <div className="absolute inset-0 bg-white/0 group-hover:bg-white/10 transition-colors"></div>
             <div className="relative z-10">
-              <h4 className="text-xl font-bold text-white mb-1 tracking-wider drop-shadow-sm">关注的消</h4>
-              <h4 className="text-xl font-bold text-white tracking-wider drop-shadow-sm">费者互动</h4>
+              <h4 className="text-xl font-bold text-white mb-1 tracking-wider">关注的消</h4>
+              <h4 className="text-xl font-bold text-white tracking-wider">费者互动</h4>
             </div>
             <div className="absolute bottom-3 right-3 w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm">
               <MessageSquare size={24} className="text-white" strokeWidth={2.5} />
@@ -159,19 +159,19 @@ export default function Home({ navigate, setActiveTab }: { navigate: (page: stri
             {/* Card 2 */}
             <div 
               onClick={() => navigate('platform_notifications')}
-              className="bg-gradient-to-br from-[#4ade80] to-[#22c55e] rounded-2xl p-4 shadow-sm flex items-center justify-center h-[58px] relative overflow-hidden group cursor-pointer hover:shadow-md transition-shadow"
+              className="bg-[#22c55e] rounded-2xl p-4 shadow-sm flex items-center justify-center h-[58px] relative overflow-hidden group cursor-pointer hover:shadow-md transition-shadow"
             >
               <div className="absolute inset-0 bg-white/0 group-hover:bg-white/10 transition-colors"></div>
-              <h4 className="text-lg font-bold text-white tracking-wider drop-shadow-sm relative z-10">平台通知</h4>
+              <h4 className="text-lg font-bold text-white tracking-wider relative z-10">平台通知</h4>
             </div>
             
             {/* Card 3 */}
             <div 
               onClick={() => navigate('market_quotes')}
-              className="bg-gradient-to-br from-[#4ade80] to-[#22c55e] rounded-2xl p-4 shadow-sm flex items-center justify-center h-[58px] relative overflow-hidden group cursor-pointer hover:shadow-md transition-shadow"
+              className="bg-[#22c55e] rounded-2xl p-4 shadow-sm flex items-center justify-center h-[58px] relative overflow-hidden group cursor-pointer hover:shadow-md transition-shadow"
             >
               <div className="absolute inset-0 bg-white/0 group-hover:bg-white/10 transition-colors"></div>
-              <h4 className="text-lg font-bold text-white tracking-wider drop-shadow-sm relative z-10">市场行情</h4>
+              <h4 className="text-lg font-bold text-white tracking-wider relative z-10">市场行情</h4>
             </div>
           </div>
         </div>

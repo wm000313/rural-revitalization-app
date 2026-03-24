@@ -198,7 +198,7 @@ export default function Verification({ onComplete, setHideTabBar }: { onComplete
       </div>
 
       <div className="pt-16 pb-6 text-center">
-        <h1 className="text-4xl font-black text-white tracking-wider drop-shadow-md" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.1)' }}>农户高级认证</h1>
+        <h1 className="text-4xl font-black text-[#166534] tracking-wider drop-shadow-sm">农户高级认证</h1>
       </div>
 
       <div className="flex-1 px-4 space-y-4 overflow-y-auto pb-32 scrollbar-hide">
@@ -292,7 +292,7 @@ export default function Verification({ onComplete, setHideTabBar }: { onComplete
       </div>
 
       <div className="pt-16 pb-6 text-center">
-        <h1 className="text-4xl font-black text-white tracking-wider drop-shadow-md" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.1)' }}>北大甄选 品牌赋能</h1>
+        <h1 className="text-4xl font-black text-[#166534] tracking-wider drop-shadow-sm">北大甄选 品牌赋能</h1>
       </div>
 
       <div className="flex-1 px-4 pt-4">
@@ -385,9 +385,9 @@ export default function Verification({ onComplete, setHideTabBar }: { onComplete
             <div className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full border-2 border-[#4ade80]"></div>
           </div>
         </div>
-        <div className="pt-16 pb-10 text-center">
-          <h1 className="text-4xl font-black text-white tracking-wider drop-shadow-md" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.1)' }}>实名认证·刷脸验证</h1>
-        </div>
+        <div className="pt-16 pb-6 text-center">
+        <h1 className="text-4xl font-black text-[#166534] tracking-wider drop-shadow-sm">实名认证·刷脸验证</h1>
+      </div>
         
         <div className="flex-1 flex flex-col items-center px-6 pt-10">
           <div className="w-full aspect-square max-w-[280px] border-[3px] border-white/60 rounded-lg relative flex items-center justify-center mb-16">
