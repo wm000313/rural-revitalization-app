@@ -32,9 +32,9 @@ export default function Verification({ onComplete, setHideTabBar }: { onComplete
   };
 
   const renderGuide = () => (
-    <div className="min-h-full bg-gradient-to-b from-[#86efac] via-[#f0fdf4] to-[#fff1f2] flex flex-col relative font-sans">
+    <div className="min-h-full bg-gradient-to-b from-[#4ade80] to-[#f0fdf4] flex flex-col relative font-sans">
       <div className="pt-10 pb-4 text-center relative z-10">
-        <h1 className="text-3xl font-black text-white tracking-wider drop-shadow-lg" style={{ textShadow: '0 2px 8px rgba(34,197,94,0.4)' }}>认证流程指引</h1>
+        <h1 className="text-3xl font-black text-white tracking-wider drop-shadow-md" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.2)' }}>认证流程指引</h1>
       </div>
       
       <div className="flex-1 px-4 flex flex-col gap-6 pb-48 pt-4 relative z-10">
@@ -105,7 +105,7 @@ export default function Verification({ onComplete, setHideTabBar }: { onComplete
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             onClick={() => goToStep(1)}
-            className="w-full py-4 bg-gradient-to-r from-[#16a34a] via-[#22c55e] to-[#16a34a] bg-[length:200%_auto] hover:bg-right transition-all duration-500 rounded-full text-white text-xl font-black shadow-[0_10px_20px_rgba(34,197,94,0.4)] tracking-widest relative z-20"
+            className="w-full py-4 bg-[#16a34a] rounded-full text-white text-xl font-black shadow-[0_10px_20px_rgba(22,163,74,0.3)] relative z-20"
           >
             立即注册
           </motion.button>
@@ -126,7 +126,7 @@ export default function Verification({ onComplete, setHideTabBar }: { onComplete
 
       {/* Main Content */}
       <div className="flex-1 flex flex-col items-center pt-32 px-6">
-        <h1 className="text-6xl font-black text-white tracking-widest drop-shadow-md mb-6" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.1)' }}>
+        <h1 className="text-6xl font-black text-white tracking-widest drop-shadow-md mb-6" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.2)' }}>
           我是农户
         </h1>
         <p className="text-2xl text-green-900 font-medium tracking-wider mb-40">
@@ -135,7 +135,7 @@ export default function Verification({ onComplete, setHideTabBar }: { onComplete
 
         <button
           onClick={() => goToStep(2)}
-          className="w-full max-w-[280px] py-4 bg-gradient-to-r from-[#22c55e] to-[#16a34a] rounded-full text-white text-2xl font-bold shadow-[0_8px_16px_rgba(34,197,94,0.4)] active:scale-95 transition-transform"
+          className="w-full max-w-[280px] py-4 bg-[#22c55e] rounded-full text-white text-2xl font-bold shadow-[0_8px_16px_rgba(34,197,94,0.3)] active:scale-95 transition-transform"
         >
           微信授权登录
         </button>
@@ -166,7 +166,7 @@ export default function Verification({ onComplete, setHideTabBar }: { onComplete
 
         <button
           onClick={() => goToStep(3)}
-          className="w-full max-w-[280px] py-4 bg-gradient-to-r from-[#22c55e] to-[#16a34a] rounded-full text-white text-2xl font-bold shadow-[0_8px_16px_rgba(34,197,94,0.4)] active:scale-95 transition-transform"
+          className="w-full max-w-[280px] py-4 bg-[#22c55e] rounded-full text-white text-2xl font-bold shadow-[0_8px_16px_rgba(34,197,94,0.3)] active:scale-95 transition-transform"
         >
           下一步：高级认证
         </button>
@@ -275,7 +275,7 @@ export default function Verification({ onComplete, setHideTabBar }: { onComplete
       <div className="absolute bottom-8 left-0 right-0 px-6">
         <button
           onClick={() => goToStep(4)}
-          className="w-full py-4 bg-gradient-to-r from-[#22c55e] to-[#16a34a] rounded-full text-white text-2xl font-bold shadow-[0_8px_16px_rgba(34,197,94,0.4)] active:scale-95 transition-transform"
+          className="w-full py-4 bg-[#22c55e] rounded-full text-white text-2xl font-bold shadow-[0_8px_16px_rgba(34,197,94,0.3)] active:scale-95 transition-transform"
         >
           下一步
         </button>
@@ -327,7 +327,7 @@ export default function Verification({ onComplete, setHideTabBar }: { onComplete
       <div className="absolute bottom-32 left-0 right-0 px-12">
         <button
           onClick={() => setShowReviewModal(true)}
-          className="w-full py-4 bg-gradient-to-r from-[#22c55e] to-[#16a34a] rounded-full text-white text-2xl font-bold shadow-[0_8px_16px_rgba(34,197,94,0.4)] active:scale-95 transition-transform"
+          className="w-full py-4 bg-[#22c55e] rounded-full text-white text-2xl font-bold shadow-[0_8px_16px_rgba(34,197,94,0.3)] active:scale-95 transition-transform"
         >
           立即申请
         </button>
@@ -409,7 +409,7 @@ export default function Verification({ onComplete, setHideTabBar }: { onComplete
           <button
             onClick={handleScan}
             disabled={scanning}
-            className="w-full max-w-[280px] py-4 bg-gradient-to-r from-[#22c55e] to-[#16a34a] rounded-full text-white text-2xl font-bold shadow-[0_8px_16px_rgba(34,197,94,0.4)] active:scale-95 transition-transform"
+            className="w-full max-w-[280px] py-4 bg-[#22c55e] rounded-full text-white text-2xl font-bold shadow-[0_8px_16px_rgba(34,197,94,0.3)] active:scale-95 transition-transform"
           >
             开始识别
           </button>
@@ -445,7 +445,7 @@ export default function Verification({ onComplete, setHideTabBar }: { onComplete
 
         <button
           onClick={() => goToStep(7)}
-          className="w-full max-w-[280px] py-4 bg-gradient-to-r from-[#16a34a] to-[#15803d] rounded-full text-white text-2xl font-bold shadow-[0_8px_16px_rgba(22,163,74,0.4)] active:scale-95 transition-transform"
+          className="w-full max-w-[280px] py-4 bg-[#16a34a] rounded-full text-white text-2xl font-bold shadow-[0_8px_16px_rgba(22,163,74,0.3)] active:scale-95 transition-transform"
         >
           签署电子协议
         </button>
@@ -496,7 +496,7 @@ export default function Verification({ onComplete, setHideTabBar }: { onComplete
               setHideTabBar(false);
               onComplete();
             }}
-            className="w-full py-4 bg-gradient-to-r from-[#22c55e] to-[#16a34a] rounded-full text-white text-xl font-bold shadow-lg shadow-green-500/30 active:scale-95 transition-transform"
+            className="w-full py-4 bg-[#22c55e] rounded-full text-white text-xl font-bold shadow-lg shadow-green-500/20 active:scale-95 transition-transform"
           >
             签署协议
           </button>
