@@ -5,7 +5,7 @@ export default function ConsumerInteraction({ navigate }: { navigate: (page: str
     {
       id: 1,
       user: '王先生',
-      avatar: 'https://ui-avatars.com/api/?name=王&background=22c55e&color=fff',
+      avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Felix&backgroundColor=e2e8f0',
       action: '评价了你的商品',
       content: '“收到的大米非常新鲜，口感很好，下次还会再来买！”',
       target: '东北长粒香米 5kg',
@@ -15,7 +15,7 @@ export default function ConsumerInteraction({ navigate }: { navigate: (page: str
     {
       id: 2,
       user: '李女士',
-      avatar: 'https://ui-avatars.com/api/?name=李&background=22c55e&color=fff',
+      avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Aneka&backgroundColor=e2e8f0',
       action: '关注了你的店铺',
       content: '',
       target: '',
@@ -25,7 +25,7 @@ export default function ConsumerInteraction({ navigate }: { navigate: (page: str
     {
       id: 3,
       user: '张老板',
-      avatar: 'https://ui-avatars.com/api/?name=张&background=22c55e&color=fff',
+      avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Max&backgroundColor=e2e8f0',
       action: '收藏了你的日记',
       content: '“今年雨水充足，果园的长势喜人，期待大丰收...”',
       target: '',

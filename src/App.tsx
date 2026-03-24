@@ -30,13 +30,13 @@ export default function App() {
 
   if (currentPage === 'verification') {
     return (
-      <div className="flex justify-center items-center bg-gray-900 min-h-screen relative">
-        <div className="fixed inset-0 z-0 pointer-events-none opacity-50"><SpringBackground /></div>
-        <div className="w-full sm:w-[440px] h-screen sm:h-[956px] sm:rounded-[50px] bg-white flex flex-col relative overflow-hidden shadow-2xl sm:border-[12px] sm:border-black z-10">
-          <div className="flex-1 overflow-y-auto scrollbar-hide">
+      <div className="flex justify-center items-center bg-gray-900 min-h-screen">
+        <div className="w-full sm:w-[440px] h-screen sm:h-[956px] sm:rounded-[50px] bg-white flex flex-col relative overflow-hidden shadow-2xl sm:border-[12px] sm:border-black">
+          <div className="absolute inset-0 z-0 pointer-events-none opacity-50"><SpringBackground /></div>
+          <div className="flex-1 overflow-y-auto scrollbar-hide z-10 relative">
             <Verification onComplete={() => setCurrentPage('main')} setHideTabBar={setHideTabBar} />
           </div>
-          {!hideTabBar && <TabBar activeTab="home" setActiveTab={() => {}} />}
+          {!hideTabBar && <div className="z-20 relative"><TabBar activeTab="home" setActiveTab={() => {}} /></div>}
         </div>
       </div>
     );
@@ -44,10 +44,12 @@ export default function App() {
 
   if (currentPage === 'aiqa') {
     return (
-      <div className="flex justify-center items-center bg-gray-900 min-h-screen relative">
-        <div className="fixed inset-0 z-0 pointer-events-none opacity-50"><SpringBackground /></div>
-        <div className="w-full sm:w-[440px] h-screen sm:h-[956px] sm:rounded-[50px] bg-white flex flex-col relative overflow-hidden shadow-2xl sm:border-[12px] sm:border-black z-10">
-          <AIQA navigate={navigate} />
+      <div className="flex justify-center items-center bg-gray-900 min-h-screen">
+        <div className="w-full sm:w-[440px] h-screen sm:h-[956px] sm:rounded-[50px] bg-white flex flex-col relative overflow-hidden shadow-2xl sm:border-[12px] sm:border-black">
+          <div className="absolute inset-0 z-0 pointer-events-none opacity-50"><SpringBackground /></div>
+          <div className="flex-1 z-10 relative overflow-y-auto">
+            <AIQA navigate={navigate} />
+          </div>
         </div>
       </div>
     );
@@ -55,10 +57,12 @@ export default function App() {
 
   if (currentPage === 'emergency') {
     return (
-      <div className="flex justify-center items-center bg-gray-900 min-h-screen relative">
-        <div className="fixed inset-0 z-0 pointer-events-none opacity-50"><SpringBackground /></div>
-        <div className="w-full sm:w-[440px] h-screen sm:h-[956px] sm:rounded-[50px] bg-white flex flex-col relative overflow-hidden shadow-2xl sm:border-[12px] sm:border-black z-10">
-          <EmergencyAid navigate={navigate} />
+      <div className="flex justify-center items-center bg-gray-900 min-h-screen">
+        <div className="w-full sm:w-[440px] h-screen sm:h-[956px] sm:rounded-[50px] bg-white flex flex-col relative overflow-hidden shadow-2xl sm:border-[12px] sm:border-black">
+          <div className="absolute inset-0 z-0 pointer-events-none opacity-50"><SpringBackground /></div>
+          <div className="flex-1 z-10 relative overflow-y-auto">
+            <EmergencyAid navigate={navigate} />
+          </div>
         </div>
       </div>
     );
@@ -66,10 +70,12 @@ export default function App() {
 
   if (currentPage === 'consumer_interaction') {
     return (
-      <div className="flex justify-center items-center bg-gray-900 min-h-screen relative">
-        <div className="fixed inset-0 z-0 pointer-events-none opacity-50"><SpringBackground /></div>
-        <div className="w-full sm:w-[440px] h-screen sm:h-[956px] sm:rounded-[50px] bg-white flex flex-col relative overflow-hidden shadow-2xl sm:border-[12px] sm:border-black z-10">
-          <ConsumerInteraction navigate={navigate} />
+      <div className="flex justify-center items-center bg-gray-900 min-h-screen">
+        <div className="w-full sm:w-[440px] h-screen sm:h-[956px] sm:rounded-[50px] bg-white flex flex-col relative overflow-hidden shadow-2xl sm:border-[12px] sm:border-black">
+          <div className="absolute inset-0 z-0 pointer-events-none opacity-50"><SpringBackground /></div>
+          <div className="flex-1 z-10 relative overflow-y-auto">
+            <ConsumerInteraction navigate={navigate} />
+          </div>
         </div>
       </div>
     );
@@ -77,10 +83,12 @@ export default function App() {
 
   if (currentPage === 'platform_notifications') {
     return (
-      <div className="flex justify-center items-center bg-gray-900 min-h-screen relative">
-        <div className="fixed inset-0 z-0 pointer-events-none opacity-50"><SpringBackground /></div>
-        <div className="w-full sm:w-[440px] h-screen sm:h-[956px] sm:rounded-[50px] bg-white flex flex-col relative overflow-hidden shadow-2xl sm:border-[12px] sm:border-black z-10">
-          <PlatformNotifications navigate={navigate} />
+      <div className="flex justify-center items-center bg-gray-900 min-h-screen">
+        <div className="w-full sm:w-[440px] h-screen sm:h-[956px] sm:rounded-[50px] bg-white flex flex-col relative overflow-hidden shadow-2xl sm:border-[12px] sm:border-black">
+          <div className="absolute inset-0 z-0 pointer-events-none opacity-50"><SpringBackground /></div>
+          <div className="flex-1 z-10 relative overflow-y-auto">
+            <PlatformNotifications navigate={navigate} />
+          </div>
         </div>
       </div>
     );
@@ -88,10 +96,12 @@ export default function App() {
 
   if (currentPage === 'market_quotes') {
     return (
-      <div className="flex justify-center items-center bg-gray-900 min-h-screen relative">
-        <div className="fixed inset-0 z-0 pointer-events-none opacity-50"><SpringBackground /></div>
-        <div className="w-full sm:w-[440px] h-screen sm:h-[956px] sm:rounded-[50px] bg-white flex flex-col relative overflow-hidden shadow-2xl sm:border-[12px] sm:border-black z-10">
-          <MarketQuotes navigate={navigate} />
+      <div className="flex justify-center items-center bg-gray-900 min-h-screen">
+        <div className="w-full sm:w-[440px] h-screen sm:h-[956px] sm:rounded-[50px] bg-white flex flex-col relative overflow-hidden shadow-2xl sm:border-[12px] sm:border-black">
+          <div className="absolute inset-0 z-0 pointer-events-none opacity-50"><SpringBackground /></div>
+          <div className="flex-1 z-10 relative overflow-y-auto">
+            <MarketQuotes navigate={navigate} />
+          </div>
         </div>
       </div>
     );
@@ -99,27 +109,29 @@ export default function App() {
 
   if (currentPage === 'featured_content') {
     return (
-      <div className="flex justify-center items-center bg-gray-900 min-h-screen relative">
-        <div className="fixed inset-0 z-0 pointer-events-none opacity-50"><SpringBackground /></div>
-        <div className="w-full sm:w-[440px] h-screen sm:h-[956px] sm:rounded-[50px] bg-white flex flex-col relative overflow-hidden shadow-2xl sm:border-[12px] sm:border-black z-10">
-          <FeaturedContent navigate={navigate} />
+      <div className="flex justify-center items-center bg-gray-900 min-h-screen">
+        <div className="w-full sm:w-[440px] h-screen sm:h-[956px] sm:rounded-[50px] bg-white flex flex-col relative overflow-hidden shadow-2xl sm:border-[12px] sm:border-black">
+          <div className="absolute inset-0 z-0 pointer-events-none opacity-50"><SpringBackground /></div>
+          <div className="flex-1 z-10 relative overflow-y-auto">
+            <FeaturedContent navigate={navigate} />
+          </div>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="flex justify-center items-center bg-gray-900 min-h-screen relative">
-      <div className="fixed inset-0 z-0 pointer-events-none opacity-50"><SpringBackground /></div>
-      <div className="w-full sm:w-[440px] h-screen sm:h-[956px] sm:rounded-[50px] bg-white flex flex-col relative overflow-hidden shadow-2xl sm:border-[12px] sm:border-black z-10">
-        <div className="flex-1 overflow-y-auto scrollbar-hide">
+    <div className="flex justify-center items-center bg-gray-900 min-h-screen">
+      <div className="w-full sm:w-[440px] h-screen sm:h-[956px] sm:rounded-[50px] bg-white flex flex-col relative overflow-hidden shadow-2xl sm:border-[12px] sm:border-black">
+        <div className="absolute inset-0 z-0 pointer-events-none opacity-50"><SpringBackground /></div>
+        <div className="flex-1 overflow-y-auto scrollbar-hide z-10 relative">
           {activeTab === 'home' && <Home navigate={navigate} setActiveTab={setActiveTab} />}
           {activeTab === 'sell' && <Sell navigate={navigate} setActiveTab={setActiveTab} />}
           {activeTab === 'diary' && <Diary setActiveTab={setActiveTab} />}
           {activeTab === 'profile' && <Profile />}
           {activeTab === 'publish' && <Publish setActiveTab={setActiveTab} />}
         </div>
-        <TabBar activeTab={activeTab} setActiveTab={setActiveTab} />
+        <div className="z-20 relative"><TabBar activeTab={activeTab} setActiveTab={setActiveTab} /></div>
       </div>
     </div>
   );

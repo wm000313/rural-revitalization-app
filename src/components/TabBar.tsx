@@ -13,12 +13,11 @@ export default function TabBar({ activeTab, setActiveTab }: { activeTab: string,
       </button>
       
       <div className="w-16 flex justify-center">
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 w-20 h-20 bg-green-500/20 rounded-full blur-xl pointer-events-none animate-pulse"></div>
         <button 
           onClick={() => setActiveTab('sell')} 
-          className={`absolute bottom-10 left-1/2 transform -translate-x-1/2 rounded-full p-4 shadow-2xl border-4 border-white active:scale-95 transition-all duration-300 ${activeTab === 'sell' ? 'bg-[#16a34a] shadow-green-600/50 text-white' : 'bg-gradient-to-br from-[#4ade80] to-[#16a34a] text-white shadow-green-500/50'}`}
+          className={`absolute bottom-10 left-1/2 transform -translate-x-1/2 rounded-full p-4 shadow-xl border-4 border-white active:scale-95 transition-transform ${activeTab === 'sell' ? 'bg-[#16a34a] shadow-green-600/40 text-white' : 'bg-gradient-to-b from-green-400 to-green-600 text-white shadow-green-500/40'}`}
         >
-          <Plus size={32} strokeWidth={3} className={`transition-transform duration-300 ${activeTab === 'sell' ? 'rotate-45' : ''}`} />
+          <Plus size={32} strokeWidth={3} className={activeTab === 'sell' ? 'rotate-45 transition-transform' : 'transition-transform'} />
         </button>
       </div>
 

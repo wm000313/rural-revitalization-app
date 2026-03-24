@@ -1,19 +1,5 @@
 @import "tailwindcss";
 
-:root {
-  --primary-green: #22c55e;
-  --dark-green: #166534;
-  --light-green: #f0fdf4;
-  --accent-green: #4ade80;
-}
-
-@layer base {
-  body {
-    @apply text-gray-900 antialiased;
-    background-color: var(--light-green);
-  }
-}
-
 @layer utilities {
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
